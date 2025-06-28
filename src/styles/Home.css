@@ -1,0 +1,190 @@
+.home-section {
+  padding-top: 20px;
+}
+
+.company-logo, .university-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.company-logo:hover, .university-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.location {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.news-content {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.news-image {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.news-attached-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.news-attached-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* News section scrollable container */
+.ant-timeline {
+  max-height: 320px;  /* Height to display approximately 3-4 news entries */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding-right: 8px; /* Leave some space for the scrollbar */
+}
+
+.ant-timeline::-webkit-scrollbar {
+  width: 6px;  /* Scrollbar width */
+}
+
+.ant-timeline::-webkit-scrollbar-thumb {
+  background-color: #d4af37;  /* Scrollbar color, matching gold theme */
+  border-radius: 3px;  /* Rounded scrollbar */
+}
+
+/* Timeline bullet points - override default blue */
+.ant-timeline-item-head {
+  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%) !important;
+  border: 2px solid #050505 !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3) !important;
+}
+
+.ant-timeline-item-tail {
+  border-left: 2px solid #e0e0e0 !important;
+}
+
+.publications-container {
+  max-height: 320px;  /* Height to display approximately 3 publication entries */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding-right: 8px; /* Leave some space for the scrollbar */
+}
+
+.publications-container::-webkit-scrollbar {
+  width: 6px;  /* Scrollbar width */
+}
+
+.publications-container::-webkit-scrollbar-thumb {
+  background-color: #d4af37;  /* Scrollbar color, matching gold theme */
+  border-radius: 3px;  /* Rounded scrollbar */
+}
+
+/* Enhanced publication links */
+.publications-container a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.publications-container a:hover {
+  color: #ffd700;
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateX(2px);
+}
+
+/* Responsive design for Experience and Education sections */
+@media (max-width: 768px) {
+  .ant-card {
+    margin-bottom: 16px;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+  .ant-list-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 12px 0 !important;
+    width: 100% !important;
+  }
+  .ant-list-item-meta {
+    width: 100%;
+    min-width: 0;
+  }
+  .ant-list-item-meta-title {
+    font-size: 1.05em !important;
+    margin-bottom: 4px;
+    word-break: break-word;
+    white-space: normal !important;
+  }
+  .ant-list-item-meta-description {
+    font-size: 0.98em !important;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal !important;
+  }
+  .company-logo, .university-logo {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+  }
+  .location {
+    font-size: 0.95em;
+    margin-top: 2px;
+  }
+}
+
+.exp-summary-wrapper {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  max-height: 0;
+  margin-top: 0;
+}
+.exp-summary-wrapper.expanded {
+  max-height: 500px; /* Should be enough for most summaries */
+  margin-top: 8px;
+}
+
+.exp-summary-list {
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+  height: auto;
+}
+.exp-summary-list.expanded {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.home-section .ant-list-item:hover {
+  background: rgba(212, 175, 55, 0.04);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.18);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+} 

@@ -1,0 +1,60 @@
+.blog-section {
+  padding-top: 20px;
+}
+
+/* Gold-themed links */
+.gold-link {
+  color: #d4af37 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.gold-link:hover {
+  color: #ffd700 !important;
+  background: rgba(212, 175, 55, 0.1);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+/* Blog list item enhancements */
+.ant-list-item {
+  transition: all 0.3s ease;
+  padding: 16px 0;
+}
+
+.ant-list-item:hover {
+  background: rgba(212, 175, 55, 0.02);
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Blog title styling */
+.ant-list-item-meta-title a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Blog date styling */
+.ant-typography.ant-typography-secondary {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Blog summary styling */
+.ant-typography {
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+} 
